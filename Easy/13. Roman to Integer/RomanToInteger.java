@@ -19,6 +19,7 @@ class Solution {
             int cur_value = legend.get(s.charAt(i));
             if(pre_value<cur_value){
                 ans-=2*pre_value;
+            }
             ans+=cur_value;
             pre_value = cur_value;
         }
