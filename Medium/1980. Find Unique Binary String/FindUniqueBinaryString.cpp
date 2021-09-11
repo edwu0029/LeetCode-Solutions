@@ -6,7 +6,7 @@ Brief Solution Explanation:
 N = Length of nums
 - Since N is relatively small(Only going up to a maximum of 16), we can loop through all
 2^N numbers and for each, check if it appears in nums. If not, we have an answer.
-- An answer always since 2^N>N for all 1<=N<=16
+- An answer always exists since 2^N>N for all 1<=N<=16
 - When looping through the 2^N numbers, be sure to add leading zeros to make the number has N digits
 
 Time Complexity: O(2^N*N)
