@@ -7,19 +7,14 @@ Check SortArrayByParityII.cpp for brief solution explanation.
 class Solution:
     def sortArrayByParityII(self, nums: List[int]) -> List[int]:
         N = len(nums)
-        evens, odds = [], []
-        for i in range(N):
-            if nums[i]%2==0:
-                evens.append(nums[i])
-            else:
-                odds.append(nums[i])
-        ans = []
-        p1, p2 = 0, 0
-        for i in range(N):
-            if i%2==0:
-                ans.append(evens[p1])
-                p1+=1
-            else:
-                ans.append(odds[p2])
-                p2+=1
-        return ans
+        i, j = 0, 1
+        while i<N and j<N:
+            while i<N and nums[i]%2==0:
+                i+=2
+            while j<N and nums[j]%2==1:
+                j+=2
+            if i<N and j<N:
+                nums[i], nums[j] = nums[j], nums[i]
+            elif i>=N or j>=N:
+                break
+        return nums
