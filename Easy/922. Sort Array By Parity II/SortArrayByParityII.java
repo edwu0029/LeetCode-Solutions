@@ -7,24 +7,22 @@ Check SortArrayByParityII.cpp for brief solution explanation.
 class Solution {
     public int[] sortArrayByParityII(int[] nums) {
         int N = nums.length;
-        LinkedList<Integer>evens = new LinkedList<Integer>();
-        LinkedList<Integer>odds = new LinkedList<Integer>();
-        for(int i = 0;i<N;i++){
-            if(nums[i]%2==0){
-                evens.add(nums[i]);
-            }else{
-                odds.add(nums[i]);
+        int i = 0, j = 1;
+        while(i<N&&j<N){
+            while(i<N&&nums[i]%2==0){
+                i+=2;
+            }
+            while(j<N&&nums[j]%2==1){
+                j+=2;
+            }
+            if(i<N&&j<N){
+                int t = nums[i];
+                nums[i] = nums[j];
+                nums[j] = t;
+            }else if(i>=N||j>=N){
+                break;
             }
         }
-        int[]ans = new int[N];
-        int p1 = 0, p2 = 0;
-        for(int i = 0;i<N;i++){
-            if(i%2==0){
-                ans[i] = evens.get(p1++);
-            }else{
-                ans[i] = odds.get(p2++);
-            }
-        }
-        return ans;
+        return nums;
     }
 }
