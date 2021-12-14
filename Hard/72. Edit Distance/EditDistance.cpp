@@ -30,8 +30,8 @@ https://www.geeksforgeeks.org/edit-distance-dp-5/
 - Notice that our dp transition only relies on the previous row, so we don't need to keep track of the
 rest of the rows of the dp table
 - Thus, our dp table only needs to 2 rows instead of N rows
-- To minimize the number of rows, we can simply swap word1 and word2 to always make sure the number of columns
-is minimized
+- To minimize the number of columns, we can simply swap word1 and word2 to always make word2 the shorter of
+the two words
 
 Time Complexity: O(N*M)
 Memory Complexity: O(min(N, M))
