@@ -3,6 +3,8 @@ LeetCode Medium: 994. Rotting Oranges
 https://leetcode.com/problems/rotting-oranges/
 
 Brief Solution Explanation:
+M = Number of rows
+N = Number of columns
 - We can use a graph traversal algorithm to solve this problem. I will use BFS(Breadth First Search).
 - Let our intial queue contain all the intially rotten oranges and run a BFS.
     - The "distance" in our case represents the time it takes for that orange to be rotten
