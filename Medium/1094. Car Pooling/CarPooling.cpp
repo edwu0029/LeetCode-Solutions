@@ -10,10 +10,10 @@ carry for each day
 - This can be calculated by summing the number of people required each day by all the trips. For example, 
 
 trips = [[2,1,5],[3,3,7]]
-Trip 1:     . 2 2 2 2 . .
-Trip 2:     . . . 3 3 3 3
+Trip 1:     . 2 2 2 2 .
+Trip 2:     . . . 3 3 3
 --------------------------
-Sum:        0 2 2 5 5 3 3
+Sum:        0 2 2 5 5 3
 
 - We can do this quickly by using a difference array approach
 https://codeforces.com/blog/entry/78762
