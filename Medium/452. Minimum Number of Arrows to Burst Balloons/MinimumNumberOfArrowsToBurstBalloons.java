@@ -22,7 +22,6 @@ class Solution {
         int[]cur = points[0];
         int ans = 1;
         for(int i = 1;i<N;i++){
- 
             if(cur[1]<points[i][0]){
                 ans++;
                 cur = points[i];
