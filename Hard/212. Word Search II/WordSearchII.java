@@ -1,6 +1,6 @@
 /*
-LeetCode Hard: 79. Word Search
-https://leetcode.com/problems/word-search/
+LeetCode Hard: 212. Word Search II
+https://leetcode.com/problems/word-search-ii/
 
 Check WordSearchII.cpp for brief solution explanation.
 */
