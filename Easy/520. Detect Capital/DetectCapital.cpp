@@ -15,5 +15,25 @@ N = Length of word
 - If none of the three cases are satisfied, then then usage of capitals is not right
 
 Time Complexity: O(N)
-Memory Complexity: O(N)
+Memory Complexity: O(1)
 */
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        int N = word.size();
+        int capitals = 0;
+        for(int i = 0;i<word.size();i++){
+            if(isCapital(word[i])){
+                capitals++;
+            }
+        }
+        if(capitals==0||capitals==N||(capitals==1&&isCapital(word[0]))){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    bool isCapital(char a){
+        return 'A'<=a&&a<='Z';
+    }
+};
