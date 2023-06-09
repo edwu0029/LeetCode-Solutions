@@ -4,7 +4,7 @@ https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/
 
 Brief Solution Explanation:
 - We want to flip bits in A and B such that A|B = C
-- Since the ith bit in C ONLY depends on the ith bit of A and ith bit of C, we simply need deal with each ith bit
+- Since the ith bit in C ONLY depends on the ith bit of A and ith bit of B, we simply need deal with each ith bit
 "column" case by case
 - Additionally, we are given that 1<=A, B, C <=10^9, so we will only need to deal with at most 30 bits, thus runtime won't
 be an issue for potentially TLE
