@@ -25,7 +25,7 @@ check = check and confirm=="1"
 if check==False:
     print("Error during input")
 else:
-    mode = 0o666
+    mode = 0o755
     parent_dir = os.path.join(os.getcwd(), difficulty)
     os.chdir(parent_dir)
 
